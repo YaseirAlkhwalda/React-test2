@@ -1,9 +1,16 @@
 import React from 'react';
 
 const User = ({ user, getUserProfile }) => {
+  const listStyle = () => {
+    return {
+      cursor: 'pointer',
+      display: 'inline-block',
+    };
+  };
+
   return (
     <ul>
-      <li style={{ cursor: 'pointer' }} onClick={getUserProfile}>
+      <li style={listStyle()} onClick={getUserProfile}>
         {user.name} {user.surname}
       </li>
     </ul>
